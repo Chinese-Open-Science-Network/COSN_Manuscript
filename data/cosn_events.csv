@@ -1,0 +1,160 @@
+﻿Events,Date,Reads,Topic
+OpenTalks,2020-05,4914,预测论文可重复性 & 70个团队如何实锤fMRI分析的灵活性
+OpenTalks,2020-06,3153,如何在神经科学中使用人工神经网络
+OpenTalks,2020-07,2925,心理科学加速器项目(The Psychological Science Accelerator)
+OpenTalks,2020-07,369,基于神经影像对幼儿认知进行个体化的预测
+OpenTalks,2020-08,1476,社会认知中的计算精神病学
+OpenTalks,2020-08,1194,The Default Mode of Human Cognition
+OpenTalks,2020-09,1125,应对精神疾病神经影像“个体变异”的努力
+OpenTalks,2020-09,2410,婴儿早期的脑功能网络发育：挑战，初步经验与前景
+OpenTalks,2020-10,5929,Sam Gershman 给青年研究者的建议
+OpenTalks,2020-10,3093,关于彻底抛弃“统计显著性”概念的倡议的简介及简评
+OpenPlus,2020-10,1887,万圣节特别篇：Trick or treat——从学术圈到工业界
+OpenTalks,2020-11,2200,脑成像中的梯度:概念和应用
+OpenTalks,2020-12,1383,跨学科开源多功能元分析数据库建设
+OpenPlus,2020-12,2246,年终特别篇：To be or not to be——2020逼你二选一
+OpenTalks,2021-01,2190,开源神经影像大数据集漫游指南
+OpenTalks,2021-01,1402,神经群体编码与刺激的表征和推断
+OpenTalks,2021-03,1155,“活动沉默性”工作记忆是一种情景记忆吗？
+OpenTalks,2021-03,1151,建立对研究成果的信任
+OpenTalks,2021-03,1657,因果推论勿随意
+OpenTalks,2021-04,1236,睾酮降低个体慷慨性的神经机制
+OpenTalks,2021-05,1516,母婴动态互动中的生理学基础
+OpenTalks,2021-05,819,科学数据共享的探索与实践————以ScienceDB为例
+OpenTalks,2021-07,1502, EEGManyPipelines：评估不同EEG分析流程及其影响
+OpenTalks,2021-07,758, Peer Community in: 评审和发布预印本的免费替代方案
+OpenTalks,2021-09,2128,Russell Poldrack: 拥抱计算上可重复性的研究文化
+OpenTalks,2021-10,1424,马伟基: Growing up in Science
+OpenTalks,2021-10,2105,董梦晨: 关于伪善(moral hypocrisy)的社会心理学
+OpenTalks,2021-11,732,"构建可重复研究的流程: Why, what, and how?"
+OpenTalks,2021-12,2838,"Michael C. Frank (Stanford),the ManyBabies Project"
+OpenPlus,2021-12,3588,圣诞特别节目：Merry Industry
+OpenTutorials,2020-03,1063,OpenSci直播 | 神经成像数据的元分析 （OpenTutorials前身）
+OpenTutorials,2020-06,2237,"Linux, docker与Git入门"
+OpenTutorials,2020-07,1639,手把手教你使用fmriprep预处理核磁功能数据和T1结构数据
+OpenTutorials,2020-08,1087,从预注册到文章发表的经历分享
+OpenTutorials,2020-11,2819,攻克心理学研究中文献查阅的七大难关
+OpenTutorials,2020-12,2239,fMRIprep（多模态磁共振数据预处理工具）详解
+OpenTutorials,2021-03,954,在Docker中使用RStudio
+OpenTutorials,2021-05,1588,脑形态学数据研究的在线工具：MircroDraw与BrainBox
+OpenTutorials,2021-07,1713,HDDM介绍以及问题汇总
+OpenTutorials,2021-08,2974,贝叶斯因子：是什么、怎么做、如何避坑？
+OpenTutorials,2021-09,2106,C-PAC：灵活易用的静息态功能磁共振批处理工具
+OpenTutorials,2021-11,809,构建可重复性工作的步骤和流程
+WE LOST,2019-01,352,WE LOST周末开放科学第一期
+WE LOST,2019-01,916,WE LOST #2：R入门介绍及数据整理
+WE LOST, 2019-01,732,WE LOST #3：心理学研究中的可重复性问题：从危机到契机
+WE LOST, 2019-01,649,WE LOST #4：数据分析与项目管理
+WE LOST, 2019-02,529,WE LOST #5：Biased Power Analysis
+WE LOST,2019-02,299,WE LOST #6：A collaborative approach to infant research
+WE LOST, 2019-03,301,WE LOST #7：The New Statistics: Why and How
+WE LOST, 2019-03,721,WE LOST #8：神经科学的低统计功效危机
+WE LOST,2019-03,539,WE LOST #9：体育与运动心理学领域的可重复性研究
+WE LOST,2019-03,1293,WE LOST #10：多层线性模型（HLM）及其自由度问题
+WE LOST,2019-03,1775,WE LOST 11：基于贝叶斯因子的样本量分析
+WE LOST,2019-04,462,WE LOST #12:心理科学中的数据管理：DFG数据管理指南
+WE LOST,2019-04,927,WE LOST #13: A Practical Primer to Power Analysis
+WE LOST,2019-04,450,WE LOST #14: Psychosocial experiments and its power
+WE LOST,2019-05,649,WE LOST #15:拨开Statistical Power与P值的迷雾
+WE LOST,2019-05,589,WE LOST #16: 预注册在心理学研究中的意义、挑战与注意事项——以EEG与fMRI研究为例
+WE LOST, 2019-05,712,WE LOST #17： 最大化研究可重复性——研究全过程中的策略
+WE LOST, 2019-06,429,WE LOST #18: Paul Meehl: Making of Failed Theories
+WE LOST, 2019-07,530,WE LOST #19: PANGEA: Power analysis for general ANOVA designs
+WE LOST,2019-09,660,WE LOST #20: p值与贝叶斯因子的比较
+WE LOST,2019-10,411,WE LOST #21: Publication bias in the social sciences
+WE LOST,2019-10,960,WE LOST #22: 非显著结果的解读和评估方法
+WE LOST,2019-11,648,"WE LOST #23: Cohen, 1990: Things I have learned (So Far)"
+WE LOST,2019-11,330,WE LOST #24: Measurement Error is NOT White Noise
+WE LOST,2019-12,381,WE LOST #25: The preregistration revolution
+OpenMinds, 2020-05,2287, 第1讲：Nature与Science上的文章有几成可被重复？
+OpenMinds, 2020-05,1096,第二讲: Contextual Sensitivity只是传说？
+OpenMinds, 2020-05,1540,"第三讲: 重复""棉花糖""实验(1)"
+OpenMinds,2020-06,1345,第四讲: 重复“棉花糖”实验引发的争议
+OpenMinds,2020-06,1391,第五讲: 科学心理学中的两种文化 & 心理测量学家的进击
+OpenMinds,2020-06,1023,第六讲-测量模型：抑郁的N种测量方式
+OpenMinds,2020-06,1413,第七讲: 测量与伪测量
+OpenMinds,2020-06,815,第八讲: 认知实验也讲信度？
+OpenMinds,2020-07,1016,第九讲: 行为测量和内隐测量
+OpenMinds, 2020-07,1321,第十讲: 内隐联想测验到底测的是什么？
+OpenMinds, 2020-07,847,第十一讲: 量表总分靠谱吗？
+OpenMinds,2020-07,955,第十二讲: 实验研究中结构方程模型的应用
+OpenMinds,2020-08,1286,第十三讲: 神经影像中的测量
+OpenMinds,2020-08,2486,第十四讲: 回顾经典—— p值、CI与统计检验力
+OpenMinds,2020-08,825,第十五讲: 对统计显著的挑战&有问题的研究行为
+OpenMinds,2020-08,1297,第十六讲: 十种常见的统计错误及其解决方案
+OpenMinds, 2020-09,1120,第十七讲: 相关与因果
+OpenMinds, 2020-09,901,第十八讲: 统计效力
+OpenMinds, 2020-09,607,第十九讲: 统计效力（二）
+OpenMinds, 2020-09,617,第二十讲: 估计与预测
+OpenMinds, 2020-10,1426,第二十一讲: 贝叶斯“新统计”
+OpenMinds, 2020-10,756,第二十二讲: 扩散决策模型
+OpenMinds, 2020-10,779,第二十三讲: 统计推断理论
+OpenMinds, 2020-11,839,第二十四讲: 统计推断理论
+OpenMinds,2020-11,1936,第二十五讲: 心理学的理论危机
+OpenMinds,2020-11,803,第二十六讲: 理论与模型的构建
+OpenMinds,2020-11,857,第二十七讲: 可推广性的危机
+OpenMinds,2021-11,1126,OpenMinds 2.0 | #1: 科学心理学中的理论危机与可重复性危机
+OpenMinds,2021-12,883,OpenMinds 2.0 | #2: 理论的危险与显著性的星号
+OpenTrans,11/16/2021,2384,使用JASP进行贝叶斯分析与结果报告的指南
+OpenTrans,5/11/2021,2308,反应时数据的多种方式 (附R代码)
+OpenTrans,12/16/2020,765,信号检测论的贝叶斯估计（一）
+OpenTrans,1/23/2021,459,信号检测论的贝叶斯估计（二）
+OpenTrans,1/30/2021,798,信号检测论的贝叶斯估计（三）
+OpenTrans,3/14/2021,1222,信号检测论的贝叶斯估计（四）
+OpenTrans,8/9/2020,972,为什么检验力的等高线图（power contour plot）非常有用？
+OpenTrans,5/16/2020,3948,How to Justify Your Sample Size
+OpenTrans,3/15/2020,630,《七宗罪》节选 | 无意识地“调整”数据分析
+OpenTrans,2/29/2020,2630,如何从p > .05的数据中提取有效信息
+OpenTrans,12/4/2019,10261,Elife | 论文写作或审稿时的十种常见统计错误
+OpenTrans,9/22/2019,2742,Mixed-Effects Models 详解：以反应时数据分析为例
+OpenTrans,9/6/2019,632,资源有限时如何提高研究的统计检验力
+OpenTrans,6/1/2019,406,如何合理化alpha: 最小化并平衡错误率
+OpenTrans,8/10/2018,1436,统计知识 | 不能信任的小样本相关结果
+OpenTrans,8/10/2018,535,统计知识 | 小样本条件相关+基于p值=灾难
+OpenTrans,6/26/2018,787,统计知识 | 发现意外的显著结果？等等，可能是假阳性！
+OpenTrans,3/7/2018,3694,统计知识 | 使用SPSS、R和JASP计算效应量的置信区间
+OpenTrans,2/12/2018,832,知识 | 心理学研究的自由度：如何避免p值操纵
+OpenTrans,6/10/2020,1396,ERP CORE：事件相关电位研究的开放资源
+OpenTrans,1/8/2019,442,元分析R程序包|综述
+OpenTrans,1/9/2019,595,元分析R程序包|分类描述
+OpenTrans,1/10/2019,948,元分析R程序包|使用指南
+OpenTrans,1/11/2019,2780,元分析R程序包|局限与展望
+OpenTrans,9/12/2018,1055,MRI的数据报告标准及其共享
+OpenTrans,8/24/2018,357,如何达到数据的可重复性
+OpenTrans,9/25/2020,3837,Advice for young investigators 给青年研究者的建议
+OpenTrans,11/6/2018,998,科学传播中的衰减效应
+OpenTrans,7/23/2018,6282,心理测量重要文献资源清单
+OpenTrans,4/22/2018,903,统计知识｜不同画图对数据信息变现的影响——以条形图和小提琴图为例
+OpenTrans,4/22/2018,238,公开数据｜想要开放脑成像数据时怎么写知情同意书？
+OpenTrans,8/30/2021,1545,研究如何减少不诚实行为的PNAS论文涉及数据伪造
+OpenTrans,4/9/2021,6761,心理学论文写作Word核心素养30条v0.1
+OpenTrans,3/29/2021,1413,Sci. Data投稿经历 | 情绪性运动数据集
+OpenTrans,6/3/2020,3608,心理学理论建构的理念和现状
+OpenTrans,4/26/2019,1271,Sci. Data投稿经历 | 人类企鹅项目数据
+OpenTrans,11/19/2019,669,回信 | 读者对《效应量置信区间的原理及其实现》中公式4.4的疑惑
+OpenTrans,5/21/2020,4612,Nature|当70个研究团队独立分析同一数据集并检验同一组研究假设时，会发生什么？
+OpenTrans,9/17/2018,2174,解答疑问 | 在心理学实验中，当最终实验结果数据不显著时，研究者们通常会怎么做？
+OpenTrans,3/29/2018,436,答疑｜预注册是否要选定特定的期刊？
+OpenTrans,7/16/2021,1716,HDDM介绍以及问题汇总
+OpenTrans,3/19/2020,845,贝叶斯检验软件包bain介绍与使用教程
+OpenTrans,5/18/2018,785,统计知识 | 如何报告贝叶斯因子
+OpenTrans,9/28/2017,529,[Pre-print]贝叶斯因子及其在JASP中的实现
+OpenTrans,7/3/2020,5266,九成以上研究者或无法正确理解p值
+OpenTrans,9/21/2019,1522,NeuroPower工具配合neurovault数据库计算样本量的经验分享
+OpenTrans,5/13/2019,967,统计效力的ABC：三个标准误法则
+OpenTrans,5/11/2019,1008,Eta-squared（η²）|| 方差分析中效应量置信区间的原理及实现
+OpenTrans,4/15/2019,4859,统计学中的「固定效应 vs. 随机效应」
+OpenTrans,8/19/2018,1791,统计知识 | 谈谈P值和α水平
+OpenTrans,10/29/2017,3034,How to Justify Your Sample Size
+OpenTrans,6/1/2020,2926,技术 | 心理测量的R包汇总
+OpenTrans,10/30/2019,2829,bruceR包重磅更新：方差分析、简单效应检验、事后多重比较
+OpenTrans,9/10/2019,1527,bruceR：数据分析的三头六臂
+OpenTrans,10/16/2018,1070,JASP 0.9.1版功能简介
+OpenTrans,6/1/2020,7962,身体图片、声音、工具及中文词汇合集
+OpenTrans,10/30/2019,13519,面孔材料和工具集合
+OpenTrans,9/10/2019,4044,公开数据 | 神经成像公开数据列表
+OpenTrans,10/16/2018,5755,开放数据 | 心理学开放数据集合
+OpenTrans,11/8/2018,1621,[Pre-print]心理学研究的元分析报告标准：现状与建议
+OpenTrans,4/29/2018,1517,统计知识 | Mini Meta-analysis或单论文中的元分析
+OpenTrans,3/25/2018,893,小技巧｜如何对你的研究进行预先备案（pre-register）？
+OpenTrans,1/30/2018,478,开放工具 | 如何在国内注册OSF
