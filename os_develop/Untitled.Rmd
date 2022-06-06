@@ -1,0 +1,470 @@
+---
+title: "osplot"
+author: "郑元瑞"
+date: "2022/4/5"
+output: html_document
+---
+# 加载包
+```{r}
+library(tidyverse)
+library(readxl)
+library(treemapify)
+library(ggthemes)
+```
+
+# 读取数据
+
+## Open Scholarship Grassroots Community Networks
+```{r}
+df.OSGCN <- read_excel("/Users/zhengyuanrui/Desktop/os_develop/Open Scholarship Grassroots Community Networks.xlsx") %>% dplyr::select(...1, developed, country) %>% rename("organization" = ...1)
+df.OSGCN$country <- str_squish(df.OSGCN$country)
+df.OSGCN %>% filter(is.na(country))
+```
+```{r}
+
+df.OSGCN <- df.OSGCN %>% filter(
+organization != "Helmholtz Open Science Coordination Office")
+df.OSGCN <- df.OSGCN %>% filter(
+organization != "Netzwerk der Open Science Initiativen (NOSI)")
+df.OSGCN <- df.OSGCN %>% filter(
+organization != "Netzwerk der Open Science Initiativen (NOSI), Germany")
+df.OSGCN <- df.OSGCN %>% filter(
+organization != "Leibniz Research Alliance Open Science")
+
+
+df.OSGCN <- df.OSGCN %>% 
+  mutate(rep_code = case_when(
+  country == "Egypt" ~ "EGY", 
+  country == "Hungary" ~ "HUN", 
+  country == "USA" ~ "USA", 
+  country == "United Kingdom"~ "GBR", 
+  country == "Nigeria" ~ "NIG", 
+  country =="France"~ "FRA", 
+    country =="Canada" ~ "CAN", 
+    country == "Germany" ~ "DEU", 
+    country =="Australia"  ~ "AUS", 
+    country =="Kenya" ~ "KEN", 
+    country =="Netherlands" ~ "NLD", 
+    country =="Brazil" ~ "BRA", 
+    country =="China" ~ "CHN", 
+    country =="Mozambique" ~ "MOZ", 
+    country =="Tunisia" ~ "TUN", 
+    country =="Bangladesh" ~ "BGD",
+    country =="Romania" ~ "ROU",
+    country =="Denmark" ~ "DNK",
+    country =="Scotland" ~ "GBR",
+    country =="Sweden" ~ "SWE",
+    country =="Ghana" ~ "GHA",
+    country =="Iceland" ~ "ISL",
+    country =="Chile" ~ "CHL",
+    country =="Austria" ~ "AUT",
+    country =="Indonesia" ~ "IDN",
+    country =="Colombia" ~ "COL",
+    country =="Pakistan" ~ "PAK",
+    country =="New Zealand" ~ "NZL",
+    country =="Turkey" ~ "TUR",
+    country =="Ukraine" ~ "UKL",
+    country =="Mexico" ~ "MEX",
+    country =="India" ~ "IND",
+    country =="Ethiopia"~ "ETH",
+    country =="Philippines"~ "PHL",
+    country =="Uganda" ~  "UGA",
+    country =="Wales" ~ "GBR",
+    country =="South Africa" ~ "ZAF",
+    country =="Italy" ~ "ITA",
+    country =="Switzerland" ~ "CHE",
+    country =="Iran" ~ "IRN",
+    country =="spain" ~ "ESP",
+    country =="Sudan" ~ "SDN",
+    country =="Czech Republic" ~ "CZE",
+    country =="Belgium" ~ "BEL",
+    country =="Cyprus" ~ "CY",
+   country == "UK" ~ "GBR", 
+  country == "swiss" ~ "CHE",
+    country == "Sweden" ~ "SWE",
+    country =="German" ~ "DEU",
+    country =="Australia" ~ "AUS",
+    country == "Portugal" ~ "PRT",
+    country == "Norway" ~ "NOR",
+    country == "Italy" ~ "ITA",
+    country == "Finland"  ~ "FIN",
+    country == "Brazil" ~ "BRA", 
+  country == "Poland" ~ "POL", 
+  country == "United States"~ "USA", 
+  country =="Japan" ~ "JPN", 
+  country =="Iran, Islamic Republic of" ~ "IRN", 
+  country =="Russian Federation" ~ "RUS", 
+  country == "Ireland" ~ "IRL",
+  country == "Nepal" ~ "NP", 
+  country == "The Republic of Senegal" ~ "SEN",
+  country == "AU and NZ" ~ "AU and NZ"
+))
+
+
+df.OSGCN[is.na(df.OSGCN) == TRUE] <- "NA"
+df.OSGCN <- df.OSGCN %>% mutate(platform = "OSGCN")
+```
+
+
+
+
+## osambassador
+```{r}
+df.osam <- read_excel("/Users/zhengyuanrui/Desktop/os_develop/osambassador.xlsx") %>% 
+  select(name, country, deveploed) %>% rename(developed = deveploed)
+df.osam$country <- str_squish(df.osam$country)
+
+df.osam <- df.osam %>% mutate(rep_code = case_when(
+  country == "Egypt" ~ "EGY", 
+  country == "Hungary" ~ "HUN", 
+  country == "USA" ~ "USA", 
+  country == "United Kingdom"~ "GBR", 
+  country == "Nigeria" ~ "NIG", 
+  country =="France"~ "FRA", 
+    country =="Canada" ~ "CAN", 
+    country == "Germany" ~ "DEU", 
+    country =="Australia"  ~ "AUS", 
+    country =="Kenya" ~ "KEN", 
+    country =="Netherlands" ~ "NLD", 
+    country =="Brazil" ~ "BRA", 
+    country =="China" ~ "CHN", 
+    country =="Mozambique" ~ "MOZ", 
+    country =="Tunisia" ~ "TUN", 
+    country =="Bangladesh" ~ "BGD",
+    country =="Romania" ~ "ROU",
+    country =="Denmark" ~ "DNK",
+    country =="Scotland" ~ "GBR",
+    country =="Sweden" ~ "SWE",
+    country =="Ghana" ~ "GHA",
+    country =="Iceland" ~ "ISL",
+    country =="Chile" ~ "CHL",
+    country =="Austria" ~ "AUT",
+    country =="Indonesia" ~ "IDN",
+    country =="Colombia" ~ "COL",
+    country =="Pakistan" ~ "PAK",
+    country =="New Zealand" ~ "NZL",
+    country =="Turkey" ~ "TUR",
+    country =="Ukraine" ~ "UKL",
+    country =="Mexico" ~ "MEX",
+    country =="India" ~ "IND",
+    country =="Ethiopia"~ "ETH",
+    country =="Philippines"~ "PHL",
+    country =="Uganda" ~  "UGA",
+    country =="Wales" ~ "GBR",
+    country =="South Africa" ~ "ZAF",
+    country =="Italy" ~ "ITA",
+    country =="Switzerland" ~ "CHE",
+    country =="Iran" ~ "IRN",
+    country =="spain" ~ "ESP",
+    country =="Sudan" ~ "SDN",
+    country =="Czech Republic" ~ "CZE",
+    country =="Belgium" ~ "BEL",
+    country =="Cyprus" ~ "CY",
+)) %>% mutate(platform = "COS ambassador")
+```
+
+
+
+
+
+
+
+
+## UK
+```{r}
+df.UK <- read_excel("/Users/zhengyuanrui/Desktop/os_develop/uk.xlsx") %>% mutate(rep_code = case_when(
+  country == "UK" ~ "GBR", 
+  country == "swiss" ~ "CHE",
+    country == "Sweden" ~ "SWE",
+    country =="German" ~ "DEU",
+    country =="Australia" ~ "AUS",
+    country == "Portugal" ~ "PRT",
+    country == "Norway" ~ "NOR",
+    country == "Italy" ~ "ITA",
+    country == "Finland"  ~ "FIN",
+    country == "Brazil" ~ "BRA",
+)) %>% mutate(platform = "Reproducibility Network")
+
+```
+## Tea
+
+```{r}
+df.tea <- read_excel("/Users/zhengyuanrui/Desktop/os_develop/ReproducibiliTea.xlsx") %>% mutate(rep_code = case_when(
+  country == "Egypt" ~ "EGY", 
+  country == "Hungary" ~ "HUN", 
+  country == "USA" ~ "USA", 
+  country == "United Kingdom"~ "GBR", 
+  country == "Nigeria" ~ "NIG", 
+  country =="France"~ "FRA", 
+    country =="Canada" ~ "CAN", 
+    country == "Germany" ~ "DEU", 
+    country =="Australia"  ~ "AUS", 
+    country =="Kenya" ~ "KEN", 
+    country =="Netherlands" ~ "NLD", 
+    country =="Brazil" ~ "BRA", 
+    country =="China" ~ "CHN", 
+    country =="Mozambique" ~ "MOZ", 
+    country =="Tunisia" ~ "TUN", 
+    country =="Bangladesh" ~ "BGD",
+    country =="Romania" ~ "ROU",
+    country =="Denmark" ~ "DNK",
+    country =="Scotland" ~ "GBR",
+    country =="Sweden" ~ "SWE",
+    country =="Ghana" ~ "GHA",
+    country =="Iceland" ~ "ISL",
+    country =="Chile" ~ "CHL",
+    country =="Austria" ~ "AUT",
+    country =="Indonesia" ~ "IDN",
+    country =="Colombia" ~ "COL",
+    country =="Pakistan" ~ "PAK",
+    country =="New Zealand" ~ "NZL",
+    country =="Turkey" ~ "TUR",
+    country =="Ukraine" ~ "UKL",
+    country =="Mexico" ~ "MEX",
+    country =="India" ~ "IND",
+    country =="Ethiopia"~ "ETH",
+    country =="Philippines"~ "PHL",
+    country =="Uganda" ~  "UGA",
+    country =="Wales" ~ "GBR",
+    country =="South Africa" ~ "ZAF",
+    country =="Italy" ~ "ITA",
+    country =="Switzerland" ~ "CHE",
+    country =="Iran" ~ "IRN",
+    country =="spain" ~ "ESP",
+    country =="Sudan" ~ "SDN",
+    country =="Czech Republic" ~ "CZE",
+    country =="Belgium" ~ "BEL",
+    country =="Cyprus" ~ "CY",
+   country == "UK" ~ "GBR", 
+  country == "swiss" ~ "CHE",
+    country == "Sweden" ~ "SWE",
+    country =="German" ~ "DEU",
+    country =="Australia" ~ "AUS",
+    country == "Portugal" ~ "PRT",
+    country == "Norway" ~ "NOR",
+    country == "Italy" ~ "ITA",
+    country == "Finland"  ~ "FIN",
+    country == "Brazil" ~ "BRA", 
+  country == "Poland" ~ "POL", 
+  country == "United States"~ "USA", 
+  country =="Japan" ~ "JPN", 
+  country =="Iran, Islamic Republic of" ~ "IRN", 
+  country =="Russian Federation" ~ "RUS", 
+  country == "Ireland" ~ "IRL"
+)) %>% mutate(platform = "ReproducibiliTea")
+```
+
+## SIPS
+```{r}
+df.SIPS <- read_xlsx("/Users/zhengyuanrui/Desktop/os_develop/SIPS.xlsx") %>% 
+  mutate(rep_code = case_when(
+  country == "Egypt" ~ "EGY", 
+  country == "Hungary" ~ "HUN", 
+  country == "USA" ~ "USA", 
+  country == "United Kingdom"~ "GBR", 
+  country == "Nigeria" ~ "NIG", 
+  country =="France"~ "FRA", 
+    country =="Canada" ~ "CAN", 
+    country == "Germany" ~ "DEU", 
+    country =="Australia"  ~ "AUS", 
+    country =="Kenya" ~ "KEN", 
+    country =="Netherlands" ~ "NLD", 
+    country =="Brazil" ~ "BRA", 
+    country =="China" ~ "CHN", 
+    country =="Mozambique" ~ "MOZ", 
+    country =="Tunisia" ~ "TUN", 
+    country =="Bangladesh" ~ "BGD",
+    country =="Romania" ~ "ROU",
+    country =="Denmark" ~ "DNK",
+    country =="Scotland" ~ "GBR",
+    country =="Sweden" ~ "SWE",
+    country =="Ghana" ~ "GHA",
+    country =="Iceland" ~ "ISL",
+    country =="Chile" ~ "CHL",
+    country =="Austria" ~ "AUT",
+    country =="Indonesia" ~ "IDN",
+    country =="Colombia" ~ "COL",
+    country =="Pakistan" ~ "PAK",
+    country =="New Zealand" ~ "NZL",
+    country =="Turkey" ~ "TUR",
+    country =="Ukraine" ~ "UKL",
+    country =="Mexico" ~ "MEX",
+    country =="India" ~ "IND",
+    country =="Ethiopia"~ "ETH",
+    country =="Philippines"~ "PHL",
+    country =="Uganda" ~  "UGA",
+    country =="Wales" ~ "GBR",
+    country =="South Africa" ~ "ZAF",
+    country =="Italy" ~ "ITA",
+    country =="Switzerland" ~ "CHE",
+    country =="Iran" ~ "IRN",
+    country =="spain" ~ "ESP",
+    country =="Sudan" ~ "SDN",
+    country =="Czech Republic" ~ "CZE",
+    country =="Belgium" ~ "BEL",
+    country =="Cyprus" ~ "CY",
+   country == "UK" ~ "GBR", 
+  country == "swiss" ~ "CHE",
+    country == "Sweden" ~ "SWE",
+    country =="German" ~ "DEU",
+    country =="Australia" ~ "AUS",
+    country == "Portugal" ~ "PRT",
+    country == "Norway" ~ "NOR",
+    country == "Italy" ~ "ITA",
+    country == "Finland"  ~ "FIN",
+    country == "Brazil" ~ "BRA", 
+  country == "Poland" ~ "POL", 
+  country == "United States"~ "USA", 
+  country =="Japan" ~ "JPN", 
+  country =="Iran, Islamic Republic of" ~ "IRN", 
+  country =="Russian Federation" ~ "RUS", 
+  country == "Ireland" ~ "IRL"
+)) %>% 
+  mutate(platform = "SIPS")
+
+```
+
+
+
+```{r}
+df_all <- rbind(df.UK[c("country", "rep_code", "developed", "platform")], df.osam[c("country", "rep_code", "developed", "platform")], df.tea[c("country", "rep_code", "developed", "platform")], df.OSGCN[c("country", "rep_code", "developed", "platform")], df.SIPS[c("country", "rep_code", "developed", "platform")], df.OSGCN[c("country", "rep_code", "developed", "platform")])
+```
+
+```{r fig.height=10, fig.width=10}
+df_final <- df_all %>% group_by(rep_code, developed, platform) %>% 
+  summarise(n = n()) %>% 
+  mutate(developed = case_when(developed == 1 ~ "developed",
+                               developed == 0 ~"developing",
+                               developed == "NA"~ "Non information")) 
+df_final$developed <- factor(df_final$developed, levels = c("developed", "developing", "Non information"))
+id <- unique(df_final$platform)
+df_na <- df_final %>% 
+  filter(developed == "Non information") %>%
+mutate(rep_code = case_when(
+  rep_code == "NA" ~ " "
+)) 
+df_final.f <- df_final %>% filter(rep_code != "NA")
+df_final <- rbind(df_final.f, df_na)
+```
+
+
+```{r}
+df.cos_plot <- df_final %>% 
+  filter(platform == "COS ambassador") %>% 
+  ggplot(aes(area = n, fill = developed, label=rep_code, 
+             subgroup = developed, subgroup2 = rep_code)) +
+  geom_treemap() +
+  geom_treemap_subgroup_border(colour = "grey", size = 13) +
+    geom_treemap_subgroup2_border(colour = "grey", size = 5) +
+  scale_fill_economist() +
+  geom_treemap_text(grow = T, reflow = T, colour = "white", place = "middle") +
+  scale_fill_manual(
+     values =  c("#5D0B3B", "#DF404A", "#817D7C")
+  ) +
+  theme(
+       #分面标题字体
+      legend.title=element_blank(), #图例标题字体
+      legend.text = element_text(size=70),#图例字体
+      legend.position = "bottom",#图例在底部
+      legend.box = "horizontal")  #水平放
+
+# ggsave(filename = "COS.png", plot = df.cos_plot, width = 20, height = 30, dpi = 300)
+df.cos_plot
+
+```
+
+```{r}
+df.OSGCN_plot <- df_final %>% 
+  filter(platform == "OSGCN") %>% 
+  ggplot(aes(area = n, fill = developed, label=rep_code, 
+             subgroup = developed, subgroup2 = rep_code)) +
+  geom_treemap() +
+  geom_treemap_subgroup_border(colour = "grey", size = 13) +
+    geom_treemap_subgroup2_border(colour = "grey", size = 5) +
+  scale_fill_economist() +
+  geom_treemap_text(grow = T, reflow = T, colour = "white", place = "middle") +
+  scale_fill_manual(
+     values =  c("#5D0B3B", "#DF404A", "#817D7C")
+  ) +
+  theme(
+       #分面标题字体
+      legend.title=element_blank(), #图例标题字体
+      legend.text = element_text(size=70),#图例字体
+      legend.position = "bottom",#图例在底部
+      legend.box = "horizontal")  #水平放
+
+# ggsave(filename = "OSGCN.png", plot = df.OSGCN_plot, width = 20, height = 30, dpi = 300)
+df.OSGCN_plot
+```
+
+```{r}
+df.ReproducibiliTea_plot <- df_final %>% 
+  filter(platform == "ReproducibiliTea") %>% 
+  ggplot(aes(area = n, fill = developed, label=rep_code, 
+             subgroup = developed, subgroup2 = rep_code)) +
+  geom_treemap() +
+  geom_treemap_subgroup_border(colour = "grey", size = 13) +
+    geom_treemap_subgroup2_border(colour = "grey", size = 5) +
+  scale_fill_economist() +
+  geom_treemap_text(grow = T, reflow = T, colour = "white", place = "middle") +
+  scale_fill_manual(
+     values =  c("#5D0B3B", "#DF404A", "#817D7C")
+  ) +
+  theme(
+       #分面标题字体
+      legend.title=element_blank(), #图例标题字体
+      legend.text = element_text(size=70),#图例字体
+      legend.position = "bottom",#图例在底部
+      legend.box = "horizontal")  #水平放
+
+ggsave(filename = "ReproducibiliTea.png", plot = df.ReproducibiliTea_plot, width = 20, height = 30, dpi = 300)
+df.ReproducibiliTea_plot
+```
+
+```{r}
+df.SIPS_plot <- df_final %>% 
+  filter(platform == "SIPS") %>% 
+  ggplot(aes(area = n, fill = developed, label=rep_code, 
+             subgroup = developed, subgroup2 = rep_code)) +
+  geom_treemap() +
+  geom_treemap_subgroup_border(colour = "grey", size = 13) +
+    geom_treemap_subgroup2_border(colour = "grey", size = 5) +
+  scale_fill_economist() +
+  geom_treemap_text(grow = T, reflow = T, colour = "white", place = "middle") +
+  scale_fill_manual(
+     values =  c("#5D0B3B", "#DF404A", "#817D7C")
+  ) +
+  theme(
+       #分面标题字体
+      legend.title=element_blank(), #图例标题字体
+      legend.text = element_text(size=70),#图例字体
+      legend.position = "bottom",#图例在底部
+      legend.box = "horizontal")  #水平放
+
+ggsave(filename = "SIPS.png", plot = df.SIPS_plot, width = 20, height = 30, dpi = 300)
+df.SIPS_plot
+```
+```{r}
+df.ReproducibilityNetwork_plot <- df_final %>% 
+  filter(platform == "Reproducibility Network") %>% 
+  ggplot(aes(area = n, fill = developed, label=rep_code, 
+             subgroup = developed, subgroup2 = rep_code)) +
+  geom_treemap() +
+  geom_treemap_subgroup_border(colour = "grey", size = 13) +
+    geom_treemap_subgroup2_border(colour = "grey", size = 5) +
+  scale_fill_economist() +
+  geom_treemap_text(grow = T, reflow = T, colour = "white", place = "middle") +
+  scale_fill_manual(
+     values =  c("#5D0B3B", "#DF404A", "#817D7C")
+  ) +
+  theme(
+       #分面标题字体
+      legend.title=element_blank(), #图例标题字体
+      legend.text = element_text(size=70),#图例字体
+      legend.position = "bottom",#图例在底部
+      legend.box = "horizontal")  #水平放
+
+ggsave(filename = "ReproducibilityNetwork.png", plot = df.ReproducibilityNetwork_plot, width = 20, height = 30, dpi = 300)
+df.ReproducibilityNetwork_plot
+```
+
