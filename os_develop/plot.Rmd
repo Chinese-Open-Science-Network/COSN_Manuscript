@@ -10,15 +10,15 @@ library(tidyverse)
 library(readxl)
 library(treemapify)
 library(ggthemes)
+library(here)
 ```
 
 # 读取数据
 
 ## Open Scholarship Grassroots Community Networks
 ```{r}
-df.OSGCN <- read_excel("/Users/zhengyuanrui/Desktop/os_develop/Open Scholarship Grassroots Community Networks.xlsx") %>% dplyr::select(...1, developed, country) %>% rename("organization" = ...1)
+df.OSGCN <- read_excel(here("os_develop", "data", "Open Scholarship Grassroots Community Networks.xlsx")) %>% dplyr::select(...1, developed, country) %>% rename("organization" = ...1)
 df.OSGCN$country <- str_squish(df.OSGCN$country)
-df.OSGCN %>% filter(is.na(country))
 ```
 ```{r}
 
@@ -110,7 +110,7 @@ df.OSGCN <- df.OSGCN %>% mutate(platform = "OSGCN")
 
 ## osambassador
 ```{r}
-df.osam <- read_excel("/Users/zhengyuanrui/Desktop/os_develop/osambassador.xlsx") %>% 
+df.osam <- read_excel(here("os_develop", "data", "osambassador.xlsx")) %>% 
   select(name, country, deveploed) %>% rename(developed = deveploed)
 df.osam$country <- str_squish(df.osam$country)
 
@@ -172,7 +172,7 @@ df.osam <- df.osam %>% mutate(rep_code = case_when(
 
 ## UK
 ```{r}
-df.UK <- read_excel("/Users/zhengyuanrui/Desktop/os_develop/uk.xlsx") %>% mutate(rep_code = case_when(
+df.UK <- read_excel(here("os_develop", "data", "uk.xlsx")) %>% mutate(rep_code = case_when(
   country == "UK" ~ "GBR", 
   country == "swiss" ~ "CHE",
     country == "Sweden" ~ "SWE",
@@ -189,7 +189,7 @@ df.UK <- read_excel("/Users/zhengyuanrui/Desktop/os_develop/uk.xlsx") %>% mutate
 ## Tea
 
 ```{r}
-df.tea <- read_excel("/Users/zhengyuanrui/Desktop/os_develop/ReproducibiliTea.xlsx") %>% mutate(rep_code = case_when(
+df.tea <- read_excel(here("os_develop", "data", "ReproducibiliTea.xlsx")) %>% mutate(rep_code = case_when(
   country == "Egypt" ~ "EGY", 
   country == "Hungary" ~ "HUN", 
   country == "USA" ~ "USA", 
@@ -256,7 +256,7 @@ df.tea <- read_excel("/Users/zhengyuanrui/Desktop/os_develop/ReproducibiliTea.xl
 
 ## SIPS
 ```{r}
-df.SIPS <- read_xlsx("/Users/zhengyuanrui/Desktop/os_develop/SIPS.xlsx") %>% 
+df.SIPS <- read_xlsx(here("os_develop", "data", "SIPS.xlsx")) %>% 
   mutate(rep_code = case_when(
   country == "Egypt" ~ "EGY", 
   country == "Hungary" ~ "HUN", 
@@ -327,7 +327,7 @@ df.SIPS <- read_xlsx("/Users/zhengyuanrui/Desktop/os_develop/SIPS.xlsx") %>%
 
 
 ```{r}
-df_all <- rbind(df.UK[c("country", "rep_code", "developed", "platform")], df.osam[c("country", "rep_code", "developed", "platform")], df.tea[c("country", "rep_code", "developed", "platform")], df.OSGCN[c("country", "rep_code", "developed", "platform")], df.SIPS[c("country", "rep_code", "developed", "platform")], df.OSGCN[c("country", "rep_code", "developed", "platform")])
+df_all <- rbind(df.UK[c("country", "rep_code", "developed", "platform")], df.osam[c("country", "rep_code", "developed", "platform")], df.tea[c("country", "rep_code", "developed", "platform")], df.OSGCN[c("country", "rep_code", "developed", "platform")], df.SIPS[c("country", "rep_code", "developed", "platform")])
 ```
 
 ```{r fig.height=10, fig.width=10}
@@ -364,13 +364,11 @@ df.cos_plot <- df_final %>%
   theme(
        #分面标题字体
       legend.title=element_blank(), #图例标题字体
-      legend.text = element_text(size=70),#图例字体
-      legend.position = "bottom",#图例在底部
+      legend.text = element_text(size=50),#图例字体
       legend.box = "horizontal")  #水平放
 
 # ggsave(filename = "COS.png", plot = df.cos_plot, width = 20, height = 30, dpi = 300)
 df.cos_plot
-
 ```
 
 ```{r}
@@ -389,8 +387,7 @@ df.OSGCN_plot <- df_final %>%
   theme(
        #分面标题字体
       legend.title=element_blank(), #图例标题字体
-      legend.text = element_text(size=70),#图例字体
-      legend.position = "bottom",#图例在底部
+      legend.text = element_text(size=50),#图例字体
       legend.box = "horizontal")  #水平放
 
 # ggsave(filename = "OSGCN.png", plot = df.OSGCN_plot, width = 20, height = 30, dpi = 300)
@@ -413,11 +410,10 @@ df.ReproducibiliTea_plot <- df_final %>%
   theme(
        #分面标题字体
       legend.title=element_blank(), #图例标题字体
-      legend.text = element_text(size=70),#图例字体
-      legend.position = "bottom",#图例在底部
+      legend.text = element_text(size=50),#图例字体
       legend.box = "horizontal")  #水平放
 
-ggsave(filename = "ReproducibiliTea.png", plot = df.ReproducibiliTea_plot, width = 20, height = 30, dpi = 300)
+# ggsave(filename = "ReproducibiliTea.png", plot = df.ReproducibiliTea_plot, width = 20, height = 30, dpi = 300)
 df.ReproducibiliTea_plot
 ```
 
@@ -437,11 +433,10 @@ df.SIPS_plot <- df_final %>%
   theme(
        #分面标题字体
       legend.title=element_blank(), #图例标题字体
-      legend.text = element_text(size=70),#图例字体
-      legend.position = "bottom",#图例在底部
+      legend.text = element_text(size=50),#图例字体
       legend.box = "horizontal")  #水平放
 
-ggsave(filename = "SIPS.png", plot = df.SIPS_plot, width = 20, height = 30, dpi = 300)
+# ggsave(filename = "SIPS.png", plot = df.SIPS_plot, width = 20, height = 30, dpi = 300)
 df.SIPS_plot
 ```
 ```{r}
@@ -461,10 +456,9 @@ df.ReproducibilityNetwork_plot <- df_final %>%
        #分面标题字体
       legend.title=element_blank(), #图例标题字体
       legend.text = element_text(size=70),#图例字体
-      legend.position = "bottom",#图例在底部
       legend.box = "horizontal")  #水平放
 
-ggsave(filename = "ReproducibilityNetwork.png", plot = df.ReproducibilityNetwork_plot, width = 20, height = 30, dpi = 300)
+# ggsave(filename = "ReproducibilityNetwork.png", plot = df.ReproducibilityNetwork_plot, width = 20, height = 30, dpi = 300)
 df.ReproducibilityNetwork_plot
 ```
 
