@@ -17,7 +17,7 @@ library(here)
 
 ## Open Scholarship Grassroots Community Networks
 ```{r}
-df.OSGCN <- read_excel(here("os_develop", "data", "Open Scholarship Grassroots Community Networks.xlsx")) %>% dplyr::select(...1, developed, country) %>% rename("organization" = ...1)
+df.OSGCN <- read_excel(here("data", "Open Scholarship Grassroots Community Networks.xlsx")) %>% dplyr::select(...1, developed, country) %>% rename("organization" = ...1)
 df.OSGCN$country <- str_squish(df.OSGCN$country)
 ```
 ```{r}
@@ -110,7 +110,7 @@ df.OSGCN <- df.OSGCN %>% mutate(platform = "OSGCN")
 
 ## osambassador
 ```{r}
-df.osam <- read_excel(here("os_develop", "data", "osambassador.xlsx")) %>% 
+df.osam <- read_excel(here("data", "osambassador.xlsx")) %>% 
   select(name, country, deveploed) %>% rename(developed = deveploed)
 df.osam$country <- str_squish(df.osam$country)
 
@@ -172,7 +172,7 @@ df.osam <- df.osam %>% mutate(rep_code = case_when(
 
 ## UK
 ```{r}
-df.UK <- read_excel(here("os_develop", "data", "uk.xlsx")) %>% mutate(rep_code = case_when(
+df.UK <- read_excel(here("data", "uk.xlsx")) %>% mutate(rep_code = case_when(
   country == "UK" ~ "GBR", 
   country == "swiss" ~ "CHE",
     country == "Sweden" ~ "SWE",
@@ -189,7 +189,7 @@ df.UK <- read_excel(here("os_develop", "data", "uk.xlsx")) %>% mutate(rep_code =
 ## Tea
 
 ```{r}
-df.tea <- read_excel(here("os_develop", "data", "ReproducibiliTea.xlsx")) %>% mutate(rep_code = case_when(
+df.tea <- read_excel(here("data", "ReproducibiliTea.xlsx")) %>% mutate(rep_code = case_when(
   country == "Egypt" ~ "EGY", 
   country == "Hungary" ~ "HUN", 
   country == "USA" ~ "USA", 
@@ -256,7 +256,7 @@ df.tea <- read_excel(here("os_develop", "data", "ReproducibiliTea.xlsx")) %>% mu
 
 ## SIPS
 ```{r}
-df.SIPS <- read_xlsx(here("os_develop", "data", "SIPS.xlsx")) %>% 
+df.SIPS <- read_xlsx(here("data", "SIPS.xlsx")) %>% 
   mutate(rep_code = case_when(
   country == "Egypt" ~ "EGY", 
   country == "Hungary" ~ "HUN", 
