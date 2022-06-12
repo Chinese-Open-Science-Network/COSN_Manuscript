@@ -95,66 +95,66 @@ OpenMinds,2020-11,803,第二十六讲: 理论与模型的构建
 OpenMinds,2020-11,857,第二十七讲: 可推广性的危机
 OpenMinds,2021-11,1126,OpenMinds 2.0 | #1: 科学心理学中的理论危机与可重复性危机
 OpenMinds,2021-12,883,OpenMinds 2.0 | #2: 理论的危险与显著性的星号
-OpenTrans,11/16/2021,2384,使用JASP进行贝叶斯分析与结果报告的指南
-OpenTrans,5/11/2021,2308,反应时数据的多种方式 (附R代码)
-OpenTrans,12/16/2020,765,信号检测论的贝叶斯估计（一）
-OpenTrans,1/23/2021,459,信号检测论的贝叶斯估计（二）
-OpenTrans,1/30/2021,798,信号检测论的贝叶斯估计（三）
-OpenTrans,3/14/2021,1222,信号检测论的贝叶斯估计（四）
-OpenTrans,8/9/2020,972,为什么检验力的等高线图（power contour plot）非常有用？
-OpenTrans,5/16/2020,3948,How to Justify Your Sample Size
-OpenTrans,3/15/2020,630,《七宗罪》节选 | 无意识地“调整”数据分析
-OpenTrans,2/29/2020,2630,如何从p > .05的数据中提取有效信息
-OpenTrans,12/4/2019,10261,Elife | 论文写作或审稿时的十种常见统计错误
-OpenTrans,9/22/2019,2742,Mixed-Effects Models 详解：以反应时数据分析为例
-OpenTrans,9/6/2019,632,资源有限时如何提高研究的统计检验力
-OpenTrans,6/1/2019,406,如何合理化alpha: 最小化并平衡错误率
-OpenTrans,8/10/2018,1436,统计知识 | 不能信任的小样本相关结果
-OpenTrans,8/10/2018,535,统计知识 | 小样本条件相关+基于p值=灾难
-OpenTrans,6/26/2018,787,统计知识 | 发现意外的显著结果？等等，可能是假阳性！
-OpenTrans,3/7/2018,3694,统计知识 | 使用SPSS、R和JASP计算效应量的置信区间
-OpenTrans,2/12/2018,832,知识 | 心理学研究的自由度：如何避免p值操纵
-OpenTrans,6/10/2020,1396,ERP CORE：事件相关电位研究的开放资源
-OpenTrans,1/8/2019,442,元分析R程序包|综述
-OpenTrans,1/9/2019,595,元分析R程序包|分类描述
-OpenTrans,1/10/2019,948,元分析R程序包|使用指南
-OpenTrans,1/11/2019,2780,元分析R程序包|局限与展望
-OpenTrans,9/12/2018,1055,MRI的数据报告标准及其共享
-OpenTrans,8/24/2018,357,如何达到数据的可重复性
-OpenTrans,9/25/2020,3837,Advice for young investigators 给青年研究者的建议
-OpenTrans,11/6/2018,998,科学传播中的衰减效应
-OpenTrans,7/23/2018,6282,心理测量重要文献资源清单
-OpenTrans,4/22/2018,903,统计知识｜不同画图对数据信息变现的影响——以条形图和小提琴图为例
-OpenTrans,4/22/2018,238,公开数据｜想要开放脑成像数据时怎么写知情同意书？
-OpenTrans,8/30/2021,1545,研究如何减少不诚实行为的PNAS论文涉及数据伪造
-OpenTrans,4/9/2021,6761,心理学论文写作Word核心素养30条v0.1
-OpenTrans,3/29/2021,1413,Sci. Data投稿经历 | 情绪性运动数据集
-OpenTrans,6/3/2020,3608,心理学理论建构的理念和现状
-OpenTrans,4/26/2019,1271,Sci. Data投稿经历 | 人类企鹅项目数据
-OpenTrans,11/19/2019,669,回信 | 读者对《效应量置信区间的原理及其实现》中公式4.4的疑惑
-OpenTrans,5/21/2020,4612,Nature|当70个研究团队独立分析同一数据集并检验同一组研究假设时，会发生什么？
-OpenTrans,9/17/2018,2174,解答疑问 | 在心理学实验中，当最终实验结果数据不显著时，研究者们通常会怎么做？
-OpenTrans,3/29/2018,436,答疑｜预注册是否要选定特定的期刊？
-OpenTrans,7/16/2021,1716,HDDM介绍以及问题汇总
-OpenTrans,3/19/2020,845,贝叶斯检验软件包bain介绍与使用教程
-OpenTrans,5/18/2018,785,统计知识 | 如何报告贝叶斯因子
-OpenTrans,9/28/2017,529,[Pre-print]贝叶斯因子及其在JASP中的实现
-OpenTrans,7/3/2020,5266,九成以上研究者或无法正确理解p值
-OpenTrans,9/21/2019,1522,NeuroPower工具配合neurovault数据库计算样本量的经验分享
-OpenTrans,5/13/2019,967,统计效力的ABC：三个标准误法则
-OpenTrans,5/11/2019,1008,Eta-squared（η²）|| 方差分析中效应量置信区间的原理及实现
-OpenTrans,4/15/2019,4859,统计学中的「固定效应 vs. 随机效应」
-OpenTrans,8/19/2018,1791,统计知识 | 谈谈P值和α水平
-OpenTrans,10/29/2017,3034,How to Justify Your Sample Size
-OpenTrans,6/1/2020,2926,技术 | 心理测量的R包汇总
-OpenTrans,10/30/2019,2829,bruceR包重磅更新：方差分析、简单效应检验、事后多重比较
-OpenTrans,9/10/2019,1527,bruceR：数据分析的三头六臂
-OpenTrans,10/16/2018,1070,JASP 0.9.1版功能简介
-OpenTrans,6/1/2020,7962,身体图片、声音、工具及中文词汇合集
-OpenTrans,10/30/2019,13519,面孔材料和工具集合
-OpenTrans,9/10/2019,4044,公开数据 | 神经成像公开数据列表
-OpenTrans,10/16/2018,5755,开放数据 | 心理学开放数据集合
-OpenTrans,11/8/2018,1621,[Pre-print]心理学研究的元分析报告标准：现状与建议
-OpenTrans,4/29/2018,1517,统计知识 | Mini Meta-analysis或单论文中的元分析
-OpenTrans,3/25/2018,893,小技巧｜如何对你的研究进行预先备案（pre-register）？
-OpenTrans,1/30/2018,478,开放工具 | 如何在国内注册OSF
+OpenTransfer,11/16/2021,2384,使用JASP进行贝叶斯分析与结果报告的指南
+OpenTransfer,5/11/2021,2308,反应时数据的多种方式 (附R代码)
+OpenTransfer,12/16/2020,765,信号检测论的贝叶斯估计（一）
+OpenTransfer,1/23/2021,459,信号检测论的贝叶斯估计（二）
+OpenTransfer,1/30/2021,798,信号检测论的贝叶斯估计（三）
+OpenTransfer,3/14/2021,1222,信号检测论的贝叶斯估计（四）
+OpenTransfer,8/9/2020,972,为什么检验力的等高线图（power contour plot）非常有用？
+OpenTransfer,5/16/2020,3948,How to Justify Your Sample Size
+OpenTransfer,3/15/2020,630,《七宗罪》节选 | 无意识地“调整”数据分析
+OpenTransfer,2/29/2020,2630,如何从p > .05的数据中提取有效信息
+OpenTransfer,12/4/2019,10261,Elife | 论文写作或审稿时的十种常见统计错误
+OpenTransfer,9/22/2019,2742,Mixed-Effects Models 详解：以反应时数据分析为例
+OpenTransfer,9/6/2019,632,资源有限时如何提高研究的统计检验力
+OpenTransfer,6/1/2019,406,如何合理化alpha: 最小化并平衡错误率
+OpenTransfer,8/10/2018,1436,统计知识 | 不能信任的小样本相关结果
+OpenTransfer,8/10/2018,535,统计知识 | 小样本条件相关+基于p值=灾难
+OpenTransfer,6/26/2018,787,统计知识 | 发现意外的显著结果？等等，可能是假阳性！
+OpenTransfer,3/7/2018,3694,统计知识 | 使用SPSS、R和JASP计算效应量的置信区间
+OpenTransfer,2/12/2018,832,知识 | 心理学研究的自由度：如何避免p值操纵
+OpenTransfer,6/10/2020,1396,ERP CORE：事件相关电位研究的开放资源
+OpenTransfer,1/8/2019,442,元分析R程序包|综述
+OpenTransfer,1/9/2019,595,元分析R程序包|分类描述
+OpenTransfer,1/10/2019,948,元分析R程序包|使用指南
+OpenTransfer,1/11/2019,2780,元分析R程序包|局限与展望
+OpenTransfer,9/12/2018,1055,MRI的数据报告标准及其共享
+OpenTransfer,8/24/2018,357,如何达到数据的可重复性
+OpenTransfer,9/25/2020,3837,Advice for young investigators 给青年研究者的建议
+OpenTransfer,11/6/2018,998,科学传播中的衰减效应
+OpenTransfer,7/23/2018,6282,心理测量重要文献资源清单
+OpenTransfer,4/22/2018,903,统计知识｜不同画图对数据信息变现的影响——以条形图和小提琴图为例
+OpenTransfer,4/22/2018,238,公开数据｜想要开放脑成像数据时怎么写知情同意书？
+OpenTransfer,8/30/2021,1545,研究如何减少不诚实行为的PNAS论文涉及数据伪造
+OpenTransfer,4/9/2021,6761,心理学论文写作Word核心素养30条v0.1
+OpenTransfer,3/29/2021,1413,Sci. Data投稿经历 | 情绪性运动数据集
+OpenTransfer,6/3/2020,3608,心理学理论建构的理念和现状
+OpenTransfer,4/26/2019,1271,Sci. Data投稿经历 | 人类企鹅项目数据
+OpenTransfer,11/19/2019,669,回信 | 读者对《效应量置信区间的原理及其实现》中公式4.4的疑惑
+OpenTransfer,5/21/2020,4612,Nature|当70个研究团队独立分析同一数据集并检验同一组研究假设时，会发生什么？
+OpenTransfer,9/17/2018,2174,解答疑问 | 在心理学实验中，当最终实验结果数据不显著时，研究者们通常会怎么做？
+OpenTransfer,3/29/2018,436,答疑｜预注册是否要选定特定的期刊？
+OpenTransfer,7/16/2021,1716,HDDM介绍以及问题汇总
+OpenTransfer,3/19/2020,845,贝叶斯检验软件包bain介绍与使用教程
+OpenTransfer,5/18/2018,785,统计知识 | 如何报告贝叶斯因子
+OpenTransfer,9/28/2017,529,[Pre-print]贝叶斯因子及其在JASP中的实现
+OpenTransfer,7/3/2020,5266,九成以上研究者或无法正确理解p值
+OpenTransfer,9/21/2019,1522,NeuroPower工具配合neurovault数据库计算样本量的经验分享
+OpenTransfer,5/13/2019,967,统计效力的ABC：三个标准误法则
+OpenTransfer,5/11/2019,1008,Eta-squared（η²）|| 方差分析中效应量置信区间的原理及实现
+OpenTransfer,4/15/2019,4859,统计学中的「固定效应 vs. 随机效应」
+OpenTransfer,8/19/2018,1791,统计知识 | 谈谈P值和α水平
+OpenTransfer,10/29/2017,3034,How to Justify Your Sample Size
+OpenTransfer,6/1/2020,2926,技术 | 心理测量的R包汇总
+OpenTransfer,10/30/2019,2829,bruceR包重磅更新：方差分析、简单效应检验、事后多重比较
+OpenTransfer,9/10/2019,1527,bruceR：数据分析的三头六臂
+OpenTransfer,10/16/2018,1070,JASP 0.9.1版功能简介
+OpenTransfer,6/1/2020,7962,身体图片、声音、工具及中文词汇合集
+OpenTransfer,10/30/2019,13519,面孔材料和工具集合
+OpenTransfer,9/10/2019,4044,公开数据 | 神经成像公开数据列表
+OpenTransfer,10/16/2018,5755,开放数据 | 心理学开放数据集合
+OpenTransfer,11/8/2018,1621,[Pre-print]心理学研究的元分析报告标准：现状与建议
+OpenTransfer,4/29/2018,1517,统计知识 | Mini Meta-analysis或单论文中的元分析
+OpenTransfer,3/25/2018,893,小技巧｜如何对你的研究进行预先备案（pre-register）？
+OpenTransfer,1/30/2018,478,开放工具 | 如何在国内注册OSF
