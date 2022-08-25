@@ -189,7 +189,8 @@ df.UK <- read_excel(here("data", "uk.xlsx")) %>% mutate(rep_code = case_when(
 ## Tea
 
 ```{r}
-df.tea <- read_excel(here("data", "ReproducibiliTea.xlsx")) %>% mutate(rep_code = case_when(
+df.tea <- read_excel(here("data", "ReproducibiliTea.xlsx")) %>% 
+  mutate(rep_code = case_when(
   country == "Egypt" ~ "EGY", 
   country == "Hungary" ~ "HUN", 
   country == "USA" ~ "USA", 
@@ -330,9 +331,33 @@ df.SIPS <- read_xlsx(here("data", "SIPS.xlsx")) %>%
 df_all <- rbind(df.UK[c("country", "rep_code", "developed", "platform")], df.osam[c("country", "rep_code", "developed", "platform")], df.tea[c("country", "rep_code", "developed", "platform")], df.OSGCN[c("country", "rep_code", "developed", "platform")], df.SIPS[c("country", "rep_code", "developed", "platform")])
 ```
 
+
+```{r}
+df_all
+df_all %>% 
+  unique(df_all$country)
+```
+```{r}
+df.fullname <- df_all %>% 
+  mutate(full_name = case_when(
+    country == "Iran, Islamic Republic of" ~ "Iran", 
+    country == "UK" ~ "United Kingdom",
+    country == "swiss" ~ "Switzerland", 
+    country == "spain" ~ "Spain",
+    country == "Scotland" ~ "UK",
+    country == "Wales" ~ "UK",
+    country == "The Republic of Senegal" ~ "Senegal",
+    country == "Russian Federation" ~ "Russia",
+    TRUE ~ as.character(country)
+  )) 
+# write_csv(df.fullname, "figure1.csv")
+```
+
+
+
 ```{r fig.height=10, fig.width=10}
-df_final <- df_all %>% group_by(rep_code, developed, platform) %>% 
-  summarise(n = n()/100) %>% 
+df_final <- df.fullname %>% group_by(full_name, developed, platform) %>% 
+  summarise(n = n()) %>% 
   mutate(developed = case_when(developed == 1 ~ "Developed",
                                developed == 0 ~"Developing",
                                developed == "NA"~ "Not Available")) 
@@ -340,10 +365,10 @@ df_final$developed <- factor(df_final$developed, levels = c("Developed", "Develo
 id <- unique(df_final$platform)
 df_na <- df_final %>% 
   filter(developed == "Not Available") %>%
-mutate(rep_code = case_when(
-  rep_code == "NA" ~ " "
+mutate(full_name = case_when(
+  full_name == "NA" ~ " "
 )) 
-df_final.f <- df_final %>% filter(rep_code != "NA")
+df_final.f <- df_final %>% filter(full_name != "NA")
 df_final <- rbind(df_final.f, df_na)
 df_final <- df_final %>% ungroup()
 ```
@@ -352,8 +377,8 @@ df_final <- df_final %>% ungroup()
 ```{r}
 df.cos_plot <- df_final %>% 
   filter(platform == "COS ambassador") %>% 
-  ggplot(aes(area = n, fill = developed, label=rep_code, 
-             subgroup = developed, subgroup2 = rep_code)) +
+  ggplot(aes(area = n, fill = developed, label=full_name, 
+             subgroup = developed, subgroup2 = full_name)) +
   geom_treemap() +
   geom_treemap_subgroup_border(colour = "grey", size = 10) +
     geom_treemap_subgroup2_border(colour = "grey", size = 5) +
@@ -369,7 +394,7 @@ df.cos_plot <- df_final %>%
   guides(fill = F) + ggtitle("Center For Open Science")+ 
   theme(plot.title = element_text(hjust = 0.5, size = 40, face = "bold")) 
 
-# ggsave(filename = "COS.png", plot = df.cos_plot, width = 20, height = 30, dpi = 300)
+# ggsave(filename = "COS2.png", plot = df.cos_plot, width = 30, height = 20, dpi = 300)
 # df.cos_plot
 ```
 
