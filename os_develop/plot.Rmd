@@ -334,8 +334,8 @@ df_all <- rbind(df.UK[c("country", "rep_code", "developed", "platform")], df.osa
 
 ```{r}
 df_all
-df_all %>% 
-  unique(df_all$country)
+
+unique(df_all$country)
 ```
 ```{r}
 df.fullname <- df_all %>% 
