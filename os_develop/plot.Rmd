@@ -384,17 +384,17 @@ df.cos_plot <- df_final %>%
     geom_treemap_subgroup2_border(colour = "grey", size = 5) +
   geom_treemap_text(grow = T, reflow = T, colour = "white", place = "middle") +
   scale_fill_manual(
-     values =  c("#2E578C", "#8CA9DB", "#D9E2F3")
+     values =  c("#99d594", "#fed976", "#D9E2F3")
   ) +
   theme(
        #分面标题字体
       #legend.title=element_text(size =60), #图例标题字体
       #legend.text = element_text(size=60),#图例字体
       legend.box = "bottom") + #水平放
-  guides(fill = F) + ggtitle("Center For Open Science")+ 
+  guides(fill = "none") + ggtitle("Center For Open Science")+ 
   theme(plot.title = element_text(hjust = 0.5, size = 40, face = "bold")) 
 
-# ggsave(filename = "COS2.png", plot = df.cos_plot, width = 30, height = 20, dpi = 300)
+# ggsave(filename = "COS.png", plot = df.cos_plot, width = 48, height = 20, dpi = 300)
 # df.cos_plot
 ```
 
@@ -402,14 +402,14 @@ df.cos_plot <- df_final %>%
 
 df.OSGCN_plot <- df_final %>% 
   filter(platform == "OSGCN") %>% 
-  ggplot(aes(area = n, fill = developed, label=rep_code, 
-             subgroup = developed, subgroup2 = rep_code)) +
+  ggplot(aes(area = n, fill = developed, label=full_name, 
+             subgroup = developed, subgroup2 = full_name)) +
   geom_treemap() +
   geom_treemap_subgroup_border(colour = "grey", size = 10) +
     geom_treemap_subgroup2_border(colour = "grey", size = 5) +
   geom_treemap_text(grow = T, reflow = T, colour = "white", place = "middle") +
   scale_fill_manual(
-     values = c("#2E578C", "#8CA9DB", "#D9E2F3")
+     values = c("#3288bd", "#fc9272", "#e0f3f8")
   ) +
    theme(
       legend.title=element_text(size =55), #图例标题字体
@@ -419,7 +419,7 @@ df.OSGCN_plot <- df_final %>%
   guides(fill = guide_legend("")) + ggtitle("Open Science Grassroots Networks") +
   theme(plot.title = element_text(hjust = 0.5, size = 40, face = "bold")) 
 
-# ggsave(filename = "OSGCN.png", plot = df.OSGCN_plot, width = 20, height = 30, dpi = 300)
+# ggsave(filename = "OSGCN.png", plot = df.OSGCN_plot, width = 48, height = 20, dpi = 300)
 # df.OSGCN_plot
 
 ```
@@ -427,71 +427,71 @@ df.OSGCN_plot <- df_final %>%
 ```{r}
 df.ReproducibiliTea_plot <- df_final %>% 
   filter(platform == "ReproducibiliTea") %>% 
-  ggplot(aes(area = n, fill = developed, label=rep_code, 
-             subgroup = developed, subgroup2 = rep_code)) +
+  ggplot(aes(area = n, fill = developed, label=full_name, 
+             subgroup = developed, subgroup2 = full_name)) +
   geom_treemap() +
   geom_treemap_subgroup_border(colour = "grey", size = 10) +
     geom_treemap_subgroup2_border(colour = "grey", size = 5) +
   geom_treemap_text(grow = T, reflow = T, colour = "white", place = "middle") +
   scale_fill_manual(
-     values =  c("#2E578C", "#8CA9DB", "#D9E2F3")
+     values =  c("#99d594", "#fed976", "#D9E2F3")
   ) +
   theme(
        #分面标题字体
       #legend.title=element_text(size =60), #图例标题字体
      # legend.text = element_text(size=60),#图例字体
       legend.box = "horizontal") + #水平放
-  guides(fill = F) + ggtitle("ReproducibiliTea") + 
+  guides(fill = "none") + ggtitle("ReproducibiliTea") + 
   theme(plot.title = element_text(hjust = 0.5, size = 40, face = "bold")) 
 
-# ggsave(filename = "ReproducibiliTea.png", plot = df.ReproducibiliTea_plot, width = 20, height = 30, dpi = 300)
+# ggsave(filename = "ReproducibiliTea.png", plot = df.ReproducibiliTea_plot, width = 48, height = 20, dpi = 300)
 # df.ReproducibiliTea_plot
 ```
 
 ```{r}
 df.SIPS_plot <- df_final %>% 
   filter(platform == "SIPS") %>% 
-  ggplot(aes(area = n, fill = developed, label=rep_code, 
-             subgroup = developed, subgroup2 = rep_code)) +
+  ggplot(aes(area = n, fill = developed, label=full_name, 
+             subgroup = developed, subgroup2 = full_name)) +
   geom_treemap() +
   geom_treemap_subgroup_border(colour = "grey", size = 10) +
     geom_treemap_subgroup2_border(colour = "grey", size = 5) +
   geom_treemap_text(grow = T, reflow = T, colour = "white", place = "middle") +
   scale_fill_manual(
-     values =  c("#2E578C", "#8CA9DB", "#D9E2F3")
+     values =  c("#99d594", "#fed976", "#D9E2F3")
   ) +
   theme(
        #分面标题字体
       #legend.title=element_text(size =60), #图例标题字体
       #legend.text = element_text(size=60),#图例字体
       legend.box = "horizontal") + #水平放
-  guides(fill = F) + ggtitle("SIPS") + 
+  guides(fill = "none") + ggtitle("SIPS") + 
   theme(plot.title = element_text(hjust = 0.5, size = 40, face = "bold")) 
-# ggsave(filename = "SIPS.png", plot = df.SIPS_plot, width = 20, height = 30, dpi = 300)
+# ggsave(filename = "SIPS.png", plot = df.SIPS_plot, width = 48, height = 20, dpi = 300)
 # df.SIPS_plot
 ```
 ```{r}
 df.ReproducibilityNetwork_plot <- df_final %>% 
   filter(platform == "Reproducibility Network") %>% 
-  ggplot(aes(area = n, fill = developed, label=rep_code, 
-             subgroup = developed, subgroup2 = rep_code)) +
+  ggplot(aes(area = n, fill = developed, label=full_name, 
+             subgroup = developed, subgroup2 = full_name)) +
   geom_treemap() +
   geom_treemap_subgroup_border(colour = "grey", size = 10) +
     geom_treemap_subgroup2_border(colour = "grey", size = 5) +
   geom_treemap_text(grow = T, reflow = T, colour = "white", place = "middle") +
   scale_fill_manual(
-     values =  c("#2E578C", "#8CA9DB", "#D9E2F3")
+     values =  c("#99d594", "#fed976", "#D9E2F3")
   ) +
   theme(
        #分面标题字体
       #legend.title=element_text(size =60), #图例标题字体
       #legend.text = element_text(size=60),#图例字体
       legend.box = "horizontal") + #水平放
-  guides(fill = F) + ggtitle("Reproducibility Network") + 
+  guides(fill = "none") + ggtitle("Reproducibility Network") + 
   theme(plot.title = element_text(hjust = 0.5, size = 40, face = "bold")) 
   
 
-# ggsave(filename = "ReproducibilityNetwork.png", plot = df.ReproducibilityNetwork_plot, width = 20, height = 30, dpi = 300)
+# ggsave(filename = "ReproducibilityNetwork.png", plot = df.ReproducibilityNetwork_plot, width = 48, height = 20, dpi = 300)
 #df.ReproducibilityNetwork_plot
 
 ```
@@ -503,14 +503,41 @@ library(patchwork)
 
 
 
+# osgcn <- df.OSGCN_plot + theme(plot.margin = unit(c(50,100,50,100), "pt"))
+# cos <- df.cos_plot+theme(plot.margin = unit(c(0,100,50,0), "pt"))
+# tea <- df.ReproducibiliTea_plot+ theme(plot.margin = unit(c(0,100,50,100), "pt"))
+# sips <- df.SIPS_plot + theme(plot.margin = unit(c(0,100,50,100), "pt"))
+
+########
 osgcn <- df.OSGCN_plot + theme(plot.margin = unit(c(0,100,50,0), "pt"))
 cos <- df.cos_plot+theme(plot.margin = unit(c(0,100,50,0), "pt"))
 tea <- df.ReproducibiliTea_plot+ theme(plot.margin = unit(c(0,100,50,0), "pt"))
 sips <- df.SIPS_plot + theme(plot.margin = unit(c(0,100,50,0), "pt"))
+plot_all <-  osgcn/(cos|tea|sips|df.ReproducibilityNetwork_plot) + theme(plot.margin = unit(c(0,0,50,0), "pt"))+
+  plot_layout(widths = 1, guides = 'collect')  & 
+  theme(legend.position='bottom')
 
-plot_all <-  (cos|tea|sips|df.ReproducibilityNetwork_plot)/osgcn + theme(plot.margin = unit(c(0,0,50,0), "pt"))+
-  plot_layout(widths = 1, guides = 'keep') 
-ggsave(filename = "all.png", plot = plot_all, width = 40, height = 28, dpi = 300)
+#############
 
+# plot_all <- plot_all + plot_annotation(tag_levels = list(c('a', 'b'), '1')) &
+#   theme(plot.tag.position = c(0, 1),
+#         plot.tag = element_text(size = 50, family="Times New Roman", face = "bold", hjust = 0, vjust = 0))
+ggsave(filename = "all.png", plot = plot_all, width = 40, height = 30, dpi = 300)
+
+```
+
+```{r fig.height=10, fig.width=10}
+combine_b <- (cos|tea|sips|df.ReproducibilityNetwork_plot) +  plot_annotation(tag_levels = list(c('b'), '1')) & 
+  theme(plot.tag.position = c(0, 1),
+        plot.tag = element_text(size = 50, family="Times New Roman", face = "bold", hjust = 0, vjust = 0))
+
+combine_t <- osgcn + plot_annotation(tag_levels = 'a') & 
+  theme(plot.tag.position = c(0.3, 1),
+        plot.tag = element_text(size = 50, family="Times New Roman", face = "bold", hjust = 0, vjust = 0))
+```
+
+```{r}
+all <- wrap_elements(combine_t) / wrap_elements(combine_b)
+#ggsave(filename = "all2.png", plot = all, width = 40, height = 30, dpi = 300)
 ```
 
