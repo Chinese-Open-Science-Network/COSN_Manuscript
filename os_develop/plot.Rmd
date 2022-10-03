@@ -605,7 +605,7 @@ df.RN_plot <- df.merge %>%
   geom_treemap_text(grow = T, reflow = T, colour = "white", place = "middle",
                      family = "Times New Roman") +
   scale_fill_manual(
-     values = c("#3288bd", "#e6610", "#f7f7f7")
+     values = c("#3288bd", "#e66101", "#f7f7f7")
   ) +
    theme(
       legend.title=element_text(size =55), #图例标题字体
