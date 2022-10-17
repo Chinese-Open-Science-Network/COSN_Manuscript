@@ -4,7 +4,7 @@ author: "郑元瑞"
 date: "2022/4/5"
 output: html_document
 ---
-# 加载包
+# loading packages
 ```{r}
 library(tidyverse)
 library(readxl)
@@ -13,7 +13,7 @@ library(ggthemes)
 library(here)
 ```
 
-# 读取数据
+# loading data(this is the data of leaders)
 
 ## Open Scholarship Grassroots Community Networks
 ```{r}
@@ -392,8 +392,8 @@ df.cos_plot <- df_final %>%
       #legend.title=element_text(size =60), #图例标题字体
       #legend.text = element_text(size=60),#图例字体
       legend.box = "bottom") + #水平放
-  guides(fill = "none") + ggtitle("Center for Open Science")+ 
-  theme(plot.title = element_text(hjust = 0.5, size = 40, 
+  guides(fill = "none") + ggtitle("Ambassadors of Center for Open Science")+ 
+  theme(plot.title = element_text(hjust = 0.5, size = 50, 
                                   family = "Times New Roman",
                                   face = "bold")) 
 
@@ -423,7 +423,7 @@ df.OSGCN_plot <- df_final %>%
   guides(fill = "none") + ggtitle("Open Science Grassroots Networks") +
   theme(plot.title = element_text(hjust = 0.5, 
                                   family="Times New Roman", 
-                                  size = 40,
+                                  size = 50,
                                   face = "bold")) 
 
 # ggsave(filename = "OSGCN.png", plot = df.OSGCN_plot, width = 48, height = 20, dpi = 300)
@@ -547,6 +547,7 @@ combine_t <- osgcn + plot_annotation(tag_levels = 'a') &
 all <- wrap_elements(combine_t) / wrap_elements(combine_b)
 #ggsave(filename = "all2.png", plot = all, width = 40, height = 30, dpi = 300)
 ```
+## loading countrys data
 ```{r}
 df.RN <- read_excel("/Users/zhengyuanrui/COSN_Manuscript/data/RN_Organization.xlsx")
 df.RN <- df.RN %>% 
@@ -615,7 +616,7 @@ df.RN_plot <- df.merge %>%
   guides(fill = "none") + ggtitle("Reproducibility Network") +
   theme(plot.title = element_text(hjust = 0.5, 
                                   family="Times New Roman", 
-                                  size = 40,face = "bold")) 
+                                  size = 50,face = "bold")) 
 df.RN_plot
 #ggsave(filename = "RN_Org.png", plot = df.RN_plot, width = 48, height = 20, dpi = 300)
 ```
@@ -641,7 +642,7 @@ df.TEA_plot <- df.merge %>%
   guides(fill = "none") + ggtitle("ReproducibiliTea") +
   theme(plot.title = element_text(hjust = 0.5,
                                   family="Times New Roman", 
-                                  size = 40, face = "bold")) 
+                                  size = 50, face = "bold")) 
 df.TEA_plot
 #ggsave(filename = "TEA_Org.png", plot = df.TEA_plot, width = 48, height = 20, dpi = 300)
 ```
@@ -664,9 +665,9 @@ df.SIPS_plot <- df.merge %>%
       legend.text = element_text(size=55, family="Times New Roman", face = "bold"),#图例字体
       legend.key.size = unit(80, "pt"),
        legend.position = "bottom") + #水平放
-  guides(fill = "none") + ggtitle("SIPS") +
+  guides(fill = "none") + ggtitle("Members of SIPS") +
   theme(plot.title = element_text(hjust = 0.5, family="Times New Roman", 
-                                  size = 40, face = "bold")) 
+                                  size = 50, face = "bold")) 
 df.SIPS_plot
 #ggsave(filename = "SIPS_Mem.png", plot = df.SIPS_plot, width = 48, height = 20, dpi = 300)
 ```
