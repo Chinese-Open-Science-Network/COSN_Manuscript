@@ -1,13 +1,5 @@
-# COSN_Manuscript (updating)
-A repo for the manuscript of COSN, including all the figures and the corresponding codes.
+# COSN_Manuscript Repo
+This is the repo for the COSN manuscript of COSN, including all the figures, the corresponding codes and data.
 
-## Some experience for data collection
+   Jin, H. Wang, Q. et al. The Chinese Open Science Network (COSN): Building an Open Science community from scratch. Preprint at https://doi.org/10.31234/osf.io/ac9by (2022) (Accepted by ***AMPPS***, [pre-print](https://psyarxiv.com/ac9by/)).
 
-1. **Columns**: Event, Date, Reads, Topic, Ref;
-
-    1. **Event**: ```String``` in ['OpenTrans', 'OpenTalks', 'OpenTutorials', 'OpenMinds', 'OpenPlus'];
-    2. **Date**: ```Datetime``` formated as %Y-%m-%d ;
-    3. **Reads**: ```int``` non-negative integer; 
-    4. **Topic**: ```string``` of Chiniese topic (gbk);
-    5. **Ref**: ```string``` of English reference/topic (utf-8);
-2. 
