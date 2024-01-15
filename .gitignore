@@ -1,2 +1,5 @@
 
 notebooks/.ipynb_checkpoints/cosn_fig3-checkpoint.ipynb
+
+# ignore DS_Store files
+**/.DS_Store
